@@ -3,7 +3,7 @@ name: Build and Deploy to Docker Hub
 on:
   push:
     branches:
-      - master
+      - main
 
 jobs:
   build-and-push:
@@ -23,7 +23,7 @@ jobs:
       with:
         context: .
         file: ./docker/Dockerfile.user
-        push: true
+        push: true  
         tags: thakurkaran/start 
 
     - name: Verify Pushed Image
